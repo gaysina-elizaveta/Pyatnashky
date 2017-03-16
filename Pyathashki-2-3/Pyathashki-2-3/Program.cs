@@ -14,7 +14,7 @@ namespace Pyathashki_2_3
             try
             {
                 var game = new Game(Reader.read("C:\\Лизон\\Пятнашки.txt"));
-                while (!Game2.YouAreWinner())
+                while (!game.YouAreWinner())
                 {
                     Print.print(game);
                     try

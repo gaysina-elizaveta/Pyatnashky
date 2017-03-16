@@ -65,7 +65,6 @@ namespace Pyathashki_2_3
             }
         }
 
-
         public bool Shift(int val)
         {
             int i1 = 0;
@@ -100,7 +99,32 @@ namespace Pyathashki_2_3
             }
         }
 
-       
+        public bool YouAreWinner()
+        {
+            bool status = true;
+            int[] temper = new int[area_field.Length];
+            int temp = 0;
+            foreach (var item in area_field)
+            {
+                temper[temp] = item;
+                temp++;
+            }
+            for (int i = 0; i < temper.Length - 1; i++)
+            {
+                if ((i != temper.Length - 2) && (temper[i] > temper[i + 1]))
+                {
+                    status = false;
+                }
+                if (temper[temper.Length - 1] != 0)
+                {
+                    status = false;
+                }
+            }
+            return status;
+        }
+
+
+
 
     }
 }

@@ -17,7 +17,6 @@ namespace Pyathashki_2_3
             history.Add(val);
         }
 
-
         public void StepDown()
         {
             this.Shift(history.Last());
